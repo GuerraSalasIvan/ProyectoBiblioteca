@@ -24,4 +24,16 @@ urlpatterns = [
     path('libros/listar', views.listar_libros, name='lista_libros'),
     
     path('libros/<int:id_libro>/', views.dame_libro, name='dame_libro'),
+    
+    
+    path('cliente/listar', views.listar_cliente, name='lista_cliente'),
+    
+    path('cliente/<int:id_cliente>/', views.dame_cliente, name='dame_cliente'),
+    
+    
+    path('biblioteca/listar', views.listar_biblioteca, name='lista_biblioteca'),
+    
+    path('biblioteca/<int:id_biblioteca>/', views.dame_biblioteca, name='dame_biblioteca'),
+    
+    
 ]

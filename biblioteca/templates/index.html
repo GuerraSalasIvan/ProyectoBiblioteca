@@ -8,8 +8,15 @@
 <body>
 	<h1>Hola</h1>
 
-	<a href={% url 'lista_libros' %}>listar_libros</a>
-	<a href={% url 'dame_libro' id_libro=10 %}>dame_libros 12</a>
+
+	<a href={% url 'lista_libros' %}>listar_libros</a><br>
+	<a href={% url 'dame_libro' id_libro=10 %}>dame_libros 12</a><br>
+
+	<a href={% url 'lista_cliente' %}>listar_cliente</a><br>
+	<a href={% url 'dame_cliente' id_cliente=10 %}>dame_cliente 10</a><br>
+
+	<a href={% url 'lista_biblioteca' %}>listar_biblioteca</a><br>
+	<a href={% url 'dame_biblioteca' id_biblioteca=10 %}>dame_biblioteca 10</a>
 
 	<!--
 	<ul>

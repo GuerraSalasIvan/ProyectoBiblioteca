@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% for cliente in cliente_mostrar %}
+            <div>
+                <h2>Nombre: {{ cliente.nombre }}</h2>
+                <h2>Apellidos: {{ cliente.apellidos }}</h2>
+                <h2>Email: {{ cliente.email }}</h2>
+                <h2>Puntos: {{ cliente.puntos }}</h2>
+                <h2>Telefono: {{ cliente.telfeno }}</h2>
+                <h2>DNI: {{ cliente.dni }}</h2>
+      
+    
+
+                <a href="{% url 'dame_cliente' id_cliente=cliente.id %}">Mas info</a>
+
+                <p>-----------------------------------------------------------------------</p>
+                <br>
+
+            </div>
+        {% endfor %}
+        
+    </body>
+</html>
