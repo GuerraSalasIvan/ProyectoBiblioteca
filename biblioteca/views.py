@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 from .models import *
 
 # Create your views here.
@@ -21,6 +22,13 @@ def dame_libro_fecha(request, anyo_libro, mes_libro):
     libro = Libro.objects.select_related('biblioteca').prefetch_related('autores').filter(fecha_publicacion__year=anyo_libro, fecha_publicacion__month=mes_libro)
     
     return render(request, 'libro/libro_listar.html', {'libros_mostrar':libro})
+
+
+def dame_libro_idioma(request, idioma):
+    libro = Libro.objects.select_related('biblioteca').prefetch_related('autores').filter(Q(idioma='idioma') | Q(idioma='ES')).order_by('fecha_publicacion')
+    
+    return render(request, 'libro/libro_listar.html', {'libros_mostrar':libro})
+    
 
 
 

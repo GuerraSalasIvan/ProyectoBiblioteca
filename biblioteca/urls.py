@@ -27,6 +27,9 @@ urlpatterns = [
     
     path('libros/<int:anyo_libro>/<int:mes_libro>', views.dame_libro_fecha, name='dame_libro_fecha'),
     
+    path('libros/<str:idioma>/', views.dame_libro_idioma, name="dame_libro_idioma"),
+    
+    
     path('cliente/listar', views.listar_cliente, name='lista_cliente'),
     
     path('cliente/<int:id_cliente>/', views.dame_cliente, name='dame_cliente'),
