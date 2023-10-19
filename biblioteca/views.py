@@ -17,6 +17,13 @@ def dame_libro(request, id_libro):
 
 
 
+def dame_libro_fecha(request, anyo_libro, mes_libro):
+    libro = Libro.objects.select_related('biblioteca').prefetch_related('autores').filter(fecha_publicacion__year=anyo_libro, fecha_publicacion__month=mes_libro)
+    
+    return render(request, 'libro/libro_listar.html', {'libros_mostrar':libro})
+
+
+
 def listar_cliente(request):
     cliente = Cliente.objects.all
     

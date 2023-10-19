@@ -5,9 +5,9 @@ from django.utils import timezone
 # Create your models here.
 class Biblioteca(models.Model):
     nombre = models.CharField(max_length=100)
-    direccion = models.TextField
+    direccion = models.TextField()
     fechaCreacion = models.DateTimeField(default=timezone.now)
-    telefono = models.IntegerField
+    telefono = models.IntegerField()
     
     
 class Autor(models.Model):

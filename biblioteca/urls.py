@@ -25,6 +25,7 @@ urlpatterns = [
     
     path('libros/<int:id_libro>/', views.dame_libro, name='dame_libro'),
     
+    path('libros/<int:anyo_libro>/<int:mes_libro>', views.dame_libro_fecha, name='dame_libro_fecha'),
     
     path('cliente/listar', views.listar_cliente, name='lista_cliente'),
     
@@ -34,6 +35,7 @@ urlpatterns = [
     path('biblioteca/listar', views.listar_biblioteca, name='lista_biblioteca'),
     
     path('biblioteca/<int:id_biblioteca>/', views.dame_biblioteca, name='dame_biblioteca'),
+    
     
     
 ]
